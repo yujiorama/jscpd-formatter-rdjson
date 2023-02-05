@@ -1,0 +1,1 @@
+# jscpd-formatter-rdjson## test```shelldocker build --target bats -t "$(basename "${PWD}")":bats . && \docker run --rm -it -v "${PWD}:/code" -w /code "$(basename "${PWD}")":bats tests/ ```

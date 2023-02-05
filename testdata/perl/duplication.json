@@ -1,0 +1,29 @@
+{
+  "source": {
+    "name": "super lint",
+    "url": "https://github.com/reviewdog/reviewdog/blob/master/proto/rdf/jsonschema/DiagnosticResult.jsonschema"
+  },
+  "severity": "INFO",
+  "diagnostics": [
+    {
+      "severity": "INFO",
+      "message": "found 58.33 % duplication in testdata/perl/input/aab.pl#L1-L8 from testdata/perl/input/aaa.pl#L1-L8.",
+      "location": {
+        "path": "testdata/perl/input/aaa.pl",
+        "range": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "position": 0
+          },
+          "end": {
+            "line": 8,
+            "column": 6,
+            "position": 41
+          }
+        }
+      },
+      "original_output": "#!/usr/bin/env perl\nuse strict;\nuse warnings;\nuse utf8;\n\nfor my $key (sort keys %ENV) {\n    print \"$key\\n\";\n    print"
+    }
+  ]
+}

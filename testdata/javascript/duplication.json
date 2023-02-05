@@ -1,0 +1,49 @@
+{
+  "source": {
+    "name": "super lint",
+    "url": "https://github.com/reviewdog/reviewdog/blob/master/proto/rdf/jsonschema/DiagnosticResult.jsonschema"
+  },
+  "severity": "WARNING",
+  "diagnostics": [
+    {
+      "message": "found 88.89 % duplication in testdata/javascript/input/file3.js#L1-L9 from testdata/javascript/input/file2.js#L1-L9.",
+      "severity": "WARNING",
+      "location": {
+        "path": "testdata/javascript/input/file2.js",
+        "range": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "position": 0
+          },
+          "end": {
+            "line": 9,
+            "column": 14,
+            "position": 62
+          }
+        }
+      },
+      "original_output": "const path = require(\"path\")\n\nmodule.exports = {\n    entry: \"./src/index.js\",\n    output: {\n        path: path.resolve(__dirname, 'public'),\n        filename: \"main.js\"\n    },\n    mode: \"development\""
+    },
+    {
+      "message": "found 88.89 % duplication in testdata/javascript/input/file3.js#L1-L9 from testdata/javascript/input/file1.js#L1-L9.",
+      "severity": "WARNING",
+      "location": {
+        "path": "testdata/javascript/input/file1.js",
+        "range": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "position": 0
+          },
+          "end": {
+            "line": 9,
+            "column": 2,
+            "position": 58
+          }
+        }
+      },
+      "original_output": "const path = require(\"path\")\n\nmodule.exports = {\n    entry: \"./src/index.js\",\n    output: {\n        path: path.resolve(__dirname, 'public'),\n        filename: \"main.js\"\n    },\n}"
+    }
+  ]
+}
