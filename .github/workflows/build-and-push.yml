@@ -29,4 +29,4 @@ jobs:
           context: .
           push: true
           target: release
-          tags: ${{ github.repository }}:release
+          tags: ghcr.io/${{ github.repository }}:release
