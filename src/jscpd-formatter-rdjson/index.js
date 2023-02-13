@@ -36,7 +36,7 @@ const toMessage = (item, duplicationPercentage) => {
 const SeverityKind = {
     ERROR: {
         value: 1,
-        name: "CRITICAL"
+        name: "ERROR"
     },
     WARNING: {
         value: 2,
