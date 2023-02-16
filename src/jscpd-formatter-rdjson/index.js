@@ -93,8 +93,14 @@ const diagnostics = duplicates
             "location": {
                 "path": item.firstFile.name,
                 "range": {
-                    "start": item.firstFile.startLoc,
-                    "end": item.firstFile.endLoc
+                    "start": {
+                        "line": item.firstFile.startLoc.line,
+                        "column": item.firstFile.startLoc.column
+                    },
+                    "end": {
+                        "line": item.firstFile.endLoc.line,
+                        "column": item.firstFile.endLoc.column
+                    }
                 }
             },
             "original_output": item.fragment
