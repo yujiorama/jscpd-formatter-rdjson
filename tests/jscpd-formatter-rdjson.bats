@@ -76,7 +76,3 @@ main() {
 
   diff -u <(echo "${output}" | gron -m) <(gron -m "${expected}")
 }
-
-@test "suggestion" {
-  skip
-}
