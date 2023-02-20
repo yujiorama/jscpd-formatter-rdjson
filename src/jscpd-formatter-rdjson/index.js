@@ -84,26 +84,41 @@ const diagnostics = duplicates
             return;
         }
         const source = jscpdReport.statistics.formats[item.format].sources[keyOfSource];
-        const duplicationPercentage = source.percentage / source.clones;
+        const duplicationPercentage = Number.parseFloat(source.percentage / source.clones).toFixed(2);
         const severity = toSeverityKind(duplicationPercentage);
 
         return {
             "severity": severity.name,
             "message": toMessage(item, duplicationPercentage),
             "location": {
-                "path": item.firstFile.name,
+                "path": item.secondFile.name,
                 "range": {
                     "start": {
-                        "line": item.firstFile.startLoc.line,
-                        "column": item.firstFile.startLoc.column
+                        "line": item.secondFile.startLoc.line,
+                        "column": item.secondFile.startLoc.column
                     },
                     "end": {
-                        "line": item.firstFile.endLoc.line,
-                        "column": item.firstFile.endLoc.column
+                        "line": item.secondFile.endLoc.line,
+                        "column": item.secondFile.endLoc.column
                     }
                 }
             },
-            "original_output": item.fragment
+            "original_output": item.fragment,
+            "suggestions": [
+                {
+                    "range": {
+                        "start": {
+                            "line": item.secondFile.startLoc.line,
+                            "column": item.secondFile.startLoc.column
+                        },
+                        "end": {
+                            "line": item.secondFile.endLoc.line,
+                            "column": item.secondFile.endLoc.column
+                        }
+                    },
+                    "text": ""
+                }
+            ]
         };
     }).filter(Boolean);
 

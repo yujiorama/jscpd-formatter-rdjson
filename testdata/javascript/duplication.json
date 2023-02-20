@@ -9,7 +9,7 @@
       "message": "found 88.89 % duplication in testdata/javascript/input/file3.js#L1-L9 from testdata/javascript/input/file2.js#L1-L9.",
       "severity": "WARNING",
       "location": {
-        "path": "testdata/javascript/input/file2.js",
+        "path": "testdata/javascript/input/file3.js",
         "range": {
           "start": {
             "line": 1,
@@ -17,17 +17,32 @@
           },
           "end": {
             "line": 9,
-            "column": 14
+            "column": 10
           }
         }
       },
-      "original_output": "const path = require(\"path\")\n\nmodule.exports = {\n    entry: \"./src/index.js\",\n    output: {\n        path: path.resolve(__dirname, 'public'),\n        filename: \"main.js\"\n    },\n    mode: \"development\""
+      "original_output": "const path = require(\"path\")\n\nmodule.exports = {\n    entry: \"./src/index.js\",\n    output: {\n        path: path.resolve(__dirname, 'public'),\n        filename: \"main.js\"\n    },\n    mode: \"development\"",
+      "suggestions": [
+        {
+          "range": {
+            "start": {
+              "line": 1,
+              "column": 1
+            },
+            "end": {
+              "line": 9,
+              "column": 10
+            }
+          },
+          "text": ""
+        }
+      ]
     },
     {
       "message": "found 88.89 % duplication in testdata/javascript/input/file3.js#L1-L9 from testdata/javascript/input/file1.js#L1-L9.",
       "severity": "WARNING",
       "location": {
-        "path": "testdata/javascript/input/file1.js",
+        "path": "testdata/javascript/input/file3.js",
         "range": {
           "start": {
             "line": 1,
@@ -35,11 +50,26 @@
           },
           "end": {
             "line": 9,
-            "column": 2
+            "column": 5
           }
         }
       },
-      "original_output": "const path = require(\"path\")\n\nmodule.exports = {\n    entry: \"./src/index.js\",\n    output: {\n        path: path.resolve(__dirname, 'public'),\n        filename: \"main.js\"\n    },\n}"
+      "original_output": "const path = require(\"path\")\n\nmodule.exports = {\n    entry: \"./src/index.js\",\n    output: {\n        path: path.resolve(__dirname, 'public'),\n        filename: \"main.js\"\n    },\n}",
+      "suggestions": [
+        {
+          "range": {
+            "start": {
+              "line": 1,
+              "column": 1
+            },
+            "end": {
+              "line": 9,
+              "column": 5
+            }
+          },
+          "text": ""
+        }
+      ]
     }
   ]
 }
