@@ -103,22 +103,7 @@ const diagnostics = duplicates
                     }
                 }
             },
-            "original_output": item.fragment,
-            "suggestions": [
-                {
-                    "range": {
-                        "start": {
-                            "line": item.secondFile.startLoc.line,
-                            "column": item.secondFile.startLoc.column
-                        },
-                        "end": {
-                            "line": item.secondFile.endLoc.line,
-                            "column": item.secondFile.endLoc.column
-                        }
-                    },
-                    "text": ""
-                }
-            ]
+            "original_output": item.fragment
         };
     }).filter(Boolean);
 
