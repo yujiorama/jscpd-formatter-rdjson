@@ -21,22 +21,7 @@
           }
         }
       },
-      "original_output": "#!/usr/bin/env perl\nuse strict;\nuse warnings;\nuse utf8;\n\nfor my $key (sort keys %ENV) {\n    print \"$key\\n\";\n    print",
-      "suggestions": [
-        {
-          "range": {
-            "start": {
-              "line": 1,
-              "column": 1
-            },
-            "end": {
-              "line": 8,
-              "column": 3
-            }
-          },
-          "text": ""
-        }
-      ]
+      "original_output": "#!/usr/bin/env perl\nuse strict;\nuse warnings;\nuse utf8;\n\nfor my $key (sort keys %ENV) {\n    print \"$key\\n\";\n    print"
     }
   ]
 }

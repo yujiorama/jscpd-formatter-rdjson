@@ -21,22 +21,7 @@
           }
         }
       },
-      "original_output": "const path = require(\"path\")\n\nmodule.exports = {\n    entry: \"./src/index.js\",\n    output: {\n        path: path.resolve(__dirname, 'public'),\n        filename: \"main.js\"\n    },\n    mode: \"development\"",
-      "suggestions": [
-        {
-          "range": {
-            "start": {
-              "line": 1,
-              "column": 1
-            },
-            "end": {
-              "line": 9,
-              "column": 10
-            }
-          },
-          "text": ""
-        }
-      ]
+      "original_output": "const path = require(\"path\")\n\nmodule.exports = {\n    entry: \"./src/index.js\",\n    output: {\n        path: path.resolve(__dirname, 'public'),\n        filename: \"main.js\"\n    },\n    mode: \"development\""
     },
     {
       "message": "found 88.89 % duplication in testdata/javascript/input/file3.js#L1-L9 from testdata/javascript/input/file1.js#L1-L9.",
@@ -54,22 +39,7 @@
           }
         }
       },
-      "original_output": "const path = require(\"path\")\n\nmodule.exports = {\n    entry: \"./src/index.js\",\n    output: {\n        path: path.resolve(__dirname, 'public'),\n        filename: \"main.js\"\n    },\n}",
-      "suggestions": [
-        {
-          "range": {
-            "start": {
-              "line": 1,
-              "column": 1
-            },
-            "end": {
-              "line": 9,
-              "column": 5
-            }
-          },
-          "text": ""
-        }
-      ]
+      "original_output": "const path = require(\"path\")\n\nmodule.exports = {\n    entry: \"./src/index.js\",\n    output: {\n        path: path.resolve(__dirname, 'public'),\n        filename: \"main.js\"\n    },\n}"
     }
   ]
 }

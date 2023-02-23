@@ -21,22 +21,7 @@
           }
         }
       },
-      "original_output": "package bfs\n\nimport (\n\t\"github.com/arnauddri/algorithms/algorithms/graphs/bfs\"\n\t\"github.com/arnauddri/algorithms/data-structures/graph\"\n)\n\nfunc ShortestPath(g *graph.DirGraph, start graph.VertexId) (dist map[graph.VertexId]int) {\n\tdist = make(map[graph.VertexId]int)\n\tvisited := make(map[graph.VertexId]bool)\n\n\tgetDist := func(v graph.VertexId) {\n\t\tneighbours := g.GetNeighbours(v).VerticesIter()\n\t\tvisited[v] = true\n\n\t\tfor neighbour := range neighbours {\n\n\t\t\tok, _ := visited[neighbour]\n\t\t\tif !ok {\n\t\t\t\tdist[neighbour] = dist[v] + 1\n\t\t\t}\n\t\t}\n\t}\n\n\tbfs.Bfs(g, start, getDist)\n\n\treturn\n}\n\nfunc GetDist",
-      "suggestions": [
-        {
-          "range": {
-            "start": {
-              "line": 1,
-              "column": 1
-            },
-            "end": {
-              "line": 30,
-              "column": 5
-            }
-          },
-          "text": ""
-        }
-      ]
+      "original_output": "package bfs\n\nimport (\n\t\"github.com/arnauddri/algorithms/algorithms/graphs/bfs\"\n\t\"github.com/arnauddri/algorithms/data-structures/graph\"\n)\n\nfunc ShortestPath(g *graph.DirGraph, start graph.VertexId) (dist map[graph.VertexId]int) {\n\tdist = make(map[graph.VertexId]int)\n\tvisited := make(map[graph.VertexId]bool)\n\n\tgetDist := func(v graph.VertexId) {\n\t\tneighbours := g.GetNeighbours(v).VerticesIter()\n\t\tvisited[v] = true\n\n\t\tfor neighbour := range neighbours {\n\n\t\t\tok, _ := visited[neighbour]\n\t\t\tif !ok {\n\t\t\t\tdist[neighbour] = dist[v] + 1\n\t\t\t}\n\t\t}\n\t}\n\n\tbfs.Bfs(g, start, getDist)\n\n\treturn\n}\n\nfunc GetDist"
     }
   ]
 }
